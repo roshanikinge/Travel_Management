@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+
+    <title>WoOx Travel Bootstrap 5 Theme</title>
+
+    <!-- Bootstrap core CSS -->
+    <link href="c1.css" rel="stylesheet">
+
+    <!-- Additional CSS Files -->
+    <link rel="stylesheet" href="a3.css">
+    <link rel="stylesheet" href="a4.css">
+    <link rel="stylesheet" href="owl.css">
+    <link rel="stylesheet" href="a1.css">
+    <link rel="stylesheet"href="https://unpkg.com/swiper@7/swiper-bundle.min.css"/>
+<!--
+
+TemplateMo 580 Woox Travel
+
+https://templatemo.com/tm-580-woox-travel
+
+-->
+
+</head>
+
+<body>
+
+  <!-- ***** Preloader Start ***** -->
+  <div id="js-preloader" class="js-preloader">
+    <div class="preloader-inner">
+      <span class="dot"></span>
+      <div class="dots">
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
+    </div>
+  </div>
+  <!-- ***** Preloader End ***** -->
+
+  <!-- ***** Header Area Start ***** -->
+  <header class="header-area header-sticky">
+    <div class="container">
+        <div class="row">
+            <div class="col-12">
+                <nav class="main-nav">
+                    <!-- ***** Logo Start ***** -->
+                    <a href="index.html" class="logo">
+                        <img src="#" alt="">
+                    </a>
+                    <!-- ***** Logo End ***** -->
+                    <!-- ***** Menu Start ***** -->
+                    <ul class="nav">
+                          <li><a href="index.html" class="active">Home</a></li>
+                          <li><a href="about.html">About</a></li>
+                          <li><a href="login.html">Login</a></li>
+                          <li><a href="register.html">Register</a></li>
+                    </ul>
+                    <a class='menu-trigger'>
+                        <span>Menu</span>
+                    </a>
+                    <!-- ***** Menu End ***** -->
+                </nav>
+            </div>
+        </div>
+    </div>
+  </header>
+  <!-- ***** Header Area End ***** -->
+
+    <div class="container">  
+                    <!-- Replace "test" with your own sandbox Business account app client ID -->
+                    <script src="https://www.paypal.com/sdk/js?client-id=ATw73gXIwpYYi6LaeKbdAE79NqQj24x8jPhh2iIoK7MKMYf3xwmWds8FEHC1vpVuKzK92H-KPFnXo0ZL&currency=USD"></script>
+                    <!-- Set up a container element for the button -->
+                    <div style="margin-top: 200px;" id="paypal-button-container"></div>
+                    <script>
+                        paypal.Buttons({
+                        // Sets up the transaction when a payment button is clicked
+                        createOrder: (data, actions) => {
+                            return actions.order.create({
+                            purchase_units: [{
+                                amount: {
+                                value: '300' // Can also reference a variable or function
+                                }
+                            }]
+                            });
+                        },
+                        // Finalize the transaction after payer approval
+                        onApprove: (data, actions) => {
+                            return actions.order.capture().then(function(orderData) {
+                          
+                             window.location.href='index.html';
+                            });
+                        }
+                        }).render('#paypal-button-container');
+                    </script>
+                  
+                </div>
+            </div>
+        </div>
+  <footer>
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-12">
+          <p>Copyright © 2036 <a href="#"> Travel</a> All rights reserved.
+          <br></p>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+
+  <!-- Scripts -->
+  <!-- Bootstrap core JavaScript -->
+  <script src="e2.js"></script>
+  <script src="c2.js"></script>
+
+  <script src="b3.js"></script>
+  <script src="b4.js"></script>
+  <script src="wow.js"></script>
+  <script src="b6.js"></script>
+  <script src="b5.js"></script>
+  <script src="b1.js"></script>
+  <!--<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-/bQdsTh/da6pkI1MST/rWKFNjaCP5gBSY4sEBT38Q/9RBh9AH40zEOg7Hlq2THRZ" crossorigin="anonymous"></script> -->
+
+  <script>
+    function bannerSwitcher() {
+      next = $('.sec-1-input').filter(':checked').next('.sec-1-input');
+      if (next.length) next.prop('checked', true);
+      else $('.sec-1-input').first().prop('checked', true);
+    }
+
+    var bannerTimer = setInterval(bannerSwitcher, 5000);
+
+    $('nav .controls label').click(function() {
+      clearInterval(bannerTimer);
+      bannerTimer = setInterval(bannerSwitcher, 5000)
+    });
+  </script>
+
+  </body>
+
+</html>
+
+
+
+
+</body>
+</html>
+~
+                                                                                                                                                                                                                                                                                                                                                                           159,1         Bot
+
